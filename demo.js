@@ -31,7 +31,7 @@ async function makeDoughnut(
     {
       issuer: issuer.publicKey,
       holder: holder.publicKey,
-      expiry: 123456789,
+      expiry: Math.round(((new Date()).getTime() + 10000) / 1000),
       block_cooldown: 0,
       permissions: permissions,
     },
@@ -54,7 +54,7 @@ async function main() {
       keyring.bob,
       { "cennznet": makeCennznut("generic-asset", "transfer") }
     );
-
+    
     const tx = api.tx.genericAsset.transfer(16001, keyring.charlie.address, 10000);
     tx.addDoughnut(doughnut);
 
