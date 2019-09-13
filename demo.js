@@ -67,6 +67,8 @@ async function main() {
             event.event.data[1] == keyring.alice.address // transferred from alice's account
           )
         );
+      } else {
+        console.log("Doughnut tx failed :(");
       }
     });
 }
