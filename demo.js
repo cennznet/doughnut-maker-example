@@ -58,19 +58,7 @@ async function main() {
     const tx = api.tx.genericAsset.transfer(16001, keyring.charlie.address, 10000);
     tx.addDoughnut(doughnut);
 
-    await tx.signAndSend(keyring.bob, async ({events, status}) => {
-      if (status.isFinalized) {
-        const transfer = events.find(
-          event => (
-            event.event.data.method === 'Transferred' &&
-            event.event.data.section === 'genericAsset' &&
-            event.event.data[1] == keyring.alice.address // transferred from alice's account
-          )
-        );
-      } else {
-        console.log("Doughnut tx failed :(");
-      }
-    });
+    await tx.signAndSend(keyring.bob);
 }
 
 main().catch(console.error).finally(() => process.exit());

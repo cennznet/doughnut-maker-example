@@ -1,0 +1,28 @@
+{
+  "name": "doughnut-maker-example",
+  "version": "1.0.0",
+  "description": "Create a doughnuted transaction for CENNZnet with via SDK",
+  "main": "demo.js",
+  "engine": ">=10.13.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cennznet/doughnut-maker-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cennznet/doughnut-maker-example/issues"
+  },
+  "homepage": "https://github.com/cennznet/doughnut-maker-example#readme",
+  "dependencies": {
+    "@cennznet/api": "=0.15.1",
+    "@cennznet/cennznut": "=1.0.0",
+    "@cennznet/crml-cennzx-spot": "=0.8.0",
+    "@cennznet/crml-generic-asset": "=0.9.1",
+    "@plugnet/doughnut-maker": "=2.0.0",
+    "@plugnet/keyring": "=1.1.100"
+  }
+}
